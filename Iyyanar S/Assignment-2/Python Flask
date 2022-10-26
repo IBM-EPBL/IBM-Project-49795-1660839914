@@ -1,0 +1,21 @@
+#You need to install ibm_db using pip
+pip install ibm_db
+#Creation of connection object
+import ibm_db
+conn=ibm_db.connect(“database”,”username”,”password”)
+from ibm_db import connect
+connection = connect(‘DATABASE=,database name>;’
+ ‘HOSTNAME=<database ip>;’
+ ‘PORT=<database port>;’
+ ‘PROTOCOL=TCPIP;’
+ ‘UID=<database username>;’
+ ‘PWD=<username password>;’,’’,’’)
+#Calling fetch methods
+def results(command):
+from ibm_db import fetch_assoc
+ret=[]
+result=fetch_assoc(command)
+while result:
+ret.append(result)
+result=fetch_assoc(command)
+return ret
