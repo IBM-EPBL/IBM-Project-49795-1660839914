@@ -5,7 +5,7 @@
  Team                   :   Sridhar E (Team Leader)       
 Harikrishnan C                      
 Iyyanar S                                    
-Shaik Muhammed Kamaludeen EK
+Shaik Muhammed Kamaludeen E K
 			   			   
 Industry Mentor Name   :   Khusboo
 
