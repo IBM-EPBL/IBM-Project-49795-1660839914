@@ -43,6 +43,6 @@ Computer Science & Engineering
 
 ## Feedback
 
-If you have any feedback, please reach out to us at sridhar05vrt@gmail.com
+If you have any feedback, please reach out to us at chellanhari@gmail.com
 
 
