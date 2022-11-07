@@ -1,0 +1,5 @@
+Fabric
+Flask-SQLAlchemy
+Flask-WTF
+WTForms
+coverage
