@@ -1,0 +1,7 @@
+ibm_db
+pandas
+matplotlib
+sendgrid
+flask
+flask_session
+

@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <title>Register</title>
+        <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/heroes/">
+        <link href="static\css\assets\dist\css\bootstrap.min.css" rel="stylesheet">
+        <link href="heroes.css" rel="stylesheet">
+        <script>
+          window.watsonAssistantChatOptions = {
+            integrationID: "e15973c3-bf08-44d2-b1a3-fcaef746b52c", // The ID of this integration.
+            region: "au-syd", // The region your integration is hosted in.
+            serviceInstanceID: "561acd5a-e866-4ae1-8b04-999c9b3d1b84", // The ID of your service instance.
+            onLoad: function(instance) { instance.render(); }
+          };
+          setTimeout(function(){
+            const t=document.createElement('script');
+            t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+            document.head.appendChild(t);
+          });
+        </script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow p-3 mb-5">
+            <div class="container-fluid">
+                <div class="mx-auto order-0">
+                    <a class="navbar-brand mx-auto" href="/">Personal Expense Tracker Application</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".dual-collapse2">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+                    <ul class="navbar-nav ms-auto">
+                      <li class="nav-item active">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="signin">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+        <main>
+          <div class="container -fluid">
+            <div class="row align-items-center row mb-3">
+                  <div class="col-sm-4 glass">
+                      <form class="shadow p-3 mb-5 bg-white rounded p-4 p-md-5 border rounded-3 bg-light needs-validation" novalidate action = "{{ url_for('signup') }}" method = "POST">
+                        <h2 class="fw-bold mb-2 text-uppercase">Register</h2>
+                        <p class="text-dark-50 mb-5">Please enter your  details to register!</p>
+                        
+                        <div class="form-floating mb-3">
+                          <input type="text" class="form-control" name="fname" placeholder="Prem Kashyap">
+                          <label for="floatingInput">Name</label>
+                        </div>
+                        
+
+                        <div class="form-floating mb-3">
+                          <input type="email" class="form-control" name="femail" placeholder="iamprem@gmail.com">
+                          <label for="floatingInput">Email address</label>
+                        </div>
+                        
+
+                        <div class="form-floating mb-3">
+                          <input type="tel" class="form-control" name="mobile" placeholder="9979787978">
+                          <label for="floatingInput">Mobile No</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                          <input type="password" class="form-control" name="password" placeholder="helloworld">
+                          <label for="floatingPassword">Password</label>
+                        </div>
+
+                        <p class="link-danger">{{msg}}</p>
+
+                        <button class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
+                        <hr class="my-4">
+                        <p class="small fw-bold mt-2 pt-1 mb-0">Already registered? <a href="signin"
+                          class="link-danger">Login</a></p>
+                    </div>
+
+                      </form>
+                      <div class="col-8">
+                        <img src="static\images\signup_image.png" class="img-fluid" alt="signup_image">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          </main>
+
+          <script>
+            (function() 
+            {
+                'use strict';
+                window.addEventListener('load', function() 
+                {
+                    var forms = document.getElementsByClassName('needs-validation');
+                    var validation = Array.prototype.filter.call(forms, function(form) 
+                    {
+                        form.addEventListener('submit', function(event) 
+                        {
+                            if (form.checkValidity() === False) 
+                            {
+                                event.preventDefault();
+                                event.stopPropagation();
+                            }
+                                form.classList.add('was-validated');
+                            }, false);
+                    });
+                }, false);
+            }
+            );
+    
+        </script>
+
+    </body>
+</html>

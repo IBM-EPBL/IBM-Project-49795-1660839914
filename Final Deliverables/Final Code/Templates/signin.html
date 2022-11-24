@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <title>Login</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+        <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/heroes/">
+        <link href="static\css\assets/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script>
+          window.watsonAssistantChatOptions = {
+            integrationID: "e15973c3-bf08-44d2-b1a3-fcaef746b52c", // The ID of this integration.
+            region: "au-syd", // The region your integration is hosted in.
+            serviceInstanceID: "561acd5a-e866-4ae1-8b04-999c9b3d1b84", // The ID of your service instance.
+            onLoad: function(instance) { instance.render(); }
+          };
+          setTimeout(function(){
+            const t=document.createElement('script');
+            t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+            document.head.appendChild(t);
+          });
+        </script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow p-3 mb-5">
+            <div class="container-fluid">
+                <div class="mx-auto order-0">
+                    <a class="navbar-brand mx-auto" href="/">Personal Expense Tracker Application</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".dual-collapse2">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+                    <ul class="navbar-nav ms-auto">
+                      <li class="nav-item active">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="signup">Register</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+        <main>
+          <div class="container px-lg-5 ">
+            <div class="row align-items-center">
+                  <div class="col-sm-8">
+                    <img src="static\images\login_image.png" class="img-fluid " alt="Bootstrap Themes" width="900" height="700" loading="lazy">
+                  </div>
+                  <div class="col-sm-4 bg- glass">
+                      <form class="shadow p-3 mb-5 bg-white rounded p-4 p-md-5 border rounded-3 bg-light needs-validation" novalidate action = "{{ url_for('signin') }}" method = "POST">
+                        <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
+                        <p class="text-dark-50 mb-5">Please enter your email and password!</p>
+                        <div class="form-floating mb-3">
+                          <input type="email" class="form-control" name="femail" id="floatingInput" placeholder="name@example.com" required>
+                          <label for="floatingInput">Email address</label>
+          
+                        </div>
+                        <div class="form-floating mb-3">
+                          <input type="password" class="form-control" name="password" id="floatingPassword" placeholder="Password" required>
+                          <label for="floatingPassword">Password</label>
+                          
+                        </div>
+                        <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button><a href="#!">Forgot password?</a>
+                        <hr class="my-4">
+                        <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="signup" class="link-danger">Register</a></p> 
+                    </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+            </main>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: peta-application
+
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: peta-application
+  template:
+    metadata:
+      labels:
+        app: peta-application
+
+    spec:
+      containers:
+        - name: peta-application
+          image: peta-application
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8000
+              protocol: TCP

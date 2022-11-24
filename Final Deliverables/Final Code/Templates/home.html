@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/cover/">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="cover.css" rel="stylesheet">
+    <script>
+        window.watsonAssistantChatOptions = {
+          integrationID: "e15973c3-bf08-44d2-b1a3-fcaef746b52c", // The ID of this integration.
+          region: "au-syd", // The region your integration is hosted in.
+          serviceInstanceID: "561acd5a-e866-4ae1-8b04-999c9b3d1b84", // The ID of your service instance.
+          onLoad: function(instance) { instance.render(); }
+        };
+        setTimeout(function(){
+          const t=document.createElement('script');
+          t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+          document.head.appendChild(t);
+        });
+      </script>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow p-3 mb-5">
+        <div class="container-fluid">
+            <div class="mx-auto order-0">
+                <a class="navbar-brand mx-auto" href="/">Personal Expense Tracker Application</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".dual-collapse2">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+                <ul class="navbar-nav ms-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about">About</a>
+                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="signup">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="signin">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</head>
+
+<body class="text-bg-white">
+    <div class="cover-container d-flex w-150 h-100 p-3 mx-auto flex-column">
+
+        <div class="row mb-3">
+
+            <div class="col-6 themed-grid-col">
+                <img class="offset-lg-1 p-0 overflow-hidden" src="static\images\home_image.png" alt="home_image" width="1000">
+            </div>
+
+            <div class="col-6 themed-grid-col">
+                <h1>Personal Expense Tracker Application</h1>
+                <br>
+                <p class="lead">Personal Expense Tracker is an application which helps the customer to  track and manage all the expenses that are done by them.</p>
+                <p class="lead">
+                    <a href="about" class="btn btn-lg btn-secondary fw-bold border-white bg-dark">Learn more</a>
+                </p>
+                
+            </div>
+    </div>
+</body>
+
+

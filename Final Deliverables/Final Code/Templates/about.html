@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="static\css\features.css" rel="stylesheet">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/features/">
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script>
+      window.watsonAssistantChatOptions = {
+        integrationID: "e15973c3-bf08-44d2-b1a3-fcaef746b52c", // The ID of this integration.
+        region: "au-syd", // The region your integration is hosted in.
+        serviceInstanceID: "561acd5a-e866-4ae1-8b04-999c9b3d1b84", // The ID of your service instance.
+        onLoad: function(instance) { instance.render(); }
+      };
+      setTimeout(function(){
+        const t=document.createElement('script');
+        t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+        document.head.appendChild(t);
+      });
+    </script>
+</head>
+<body>
+   <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow p-3 mb-5">
+            <div class="container-fluid">
+                <div class="mx-auto order-0">
+                    <a class="navbar-brand mx-auto" href="/">Personal Expense Tracker Application</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".dual-collapse2">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+                    <ul class="navbar-nav ms-auto">
+                      <li class="nav-item active">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="signup">Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="signin">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container px-4 py-5">
+      
+          <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
+            <div class="d-flex flex-column align-items-start gap-2">
+              <h3 class="fw-bold">Personal Expense Tracker Application</h3>
+              <p class="text-muted">Personal Expense Tracker is an application which helps the customer to  track and manage all the expenses that are done by them.<br>Some of the important features are mentioned in the side section.</p>
+              <h2 class="pb-2 border-bottom"></h2>
+              <p>If you are interested you can register using below register button.<br>If you are already a member , Thanks for using the application. You can login using below login button.</p>
+              <div>
+                <h2 class="pb-2 border-bottom"></h2>
+                <a href="signin" class="btn btn-primary btn-lg">Login</a>                    
+                <a href="signup" class="btn btn-primary btn-lg">Register</a>
+              </div>
+            </div>
+            <div class="row row-cols-1 row-cols-sm-2 g-4">
+              <div class="d-flex flex-column gap-2">
+                <div
+                  class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
+                  <svg class="bi" width="1em" height="1em">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-wallet2" viewBox="0 0 16 16">
+                      <path d="M12.136.326A1.5 1.5 0 0 1 14 1.78V3h.5A1.5 1.5 0 0 1 16 4.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 13.5v-9a1.5 1.5 0 0 1 1.432-1.499L12.136.326zM5.562 3H13V1.78a.5.5 0 0 0-.621-.484L5.562 3zM1.5 4a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"/>
+                    </svg>                  </svg>
+                </div>
+                <h4 class="fw-semibold mb-0">Expense Tracking</h4>
+                <p class="text-muted">Bills and money spent by the member using this application can track their expenses and find how much they have spent in a particular time period.</p>
+              </div>
+      
+              <div class="d-flex flex-column gap-2">
+                <div
+                  class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
+                  <svg class="bi" width="1em" height="1em">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-app-indicator" viewBox="0 0 16 16">
+                      <path d="M5.5 2A3.5 3.5 0 0 0 2 5.5v5A3.5 3.5 0 0 0 5.5 14h5a3.5 3.5 0 0 0 3.5-3.5V8a.5.5 0 0 1 1 0v2.5a4.5 4.5 0 0 1-4.5 4.5h-5A4.5 4.5 0 0 1 1 10.5v-5A4.5 4.5 0 0 1 5.5 1H8a.5.5 0 0 1 0 1H5.5z"/>
+                      <path d="M16 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                    </svg>
+                  </svg>
+                </div>
+                <h4 class="fw-semibold mb-0">Friendly UI</h4>
+                <p class="text-muted">This application has a friendly graphical interface and any one can understand how to use this application.</p>
+              </div>
+      
+              <div class="d-flex flex-column gap-2">
+                <div
+                  class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
+                  <svg class="bi" width="1em" height="1em">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-bar-chart" viewBox="0 0 16 16">
+                      <path d="M4 11H2v3h2v-3zm5-4H7v7h2V7zm5-5v12h-2V2h2zm-2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1h-2zM6 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm-5 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-3z"/>
+                    </svg>
+                  </svg>
+                </div>
+                <h4 class="fw-semibold mb-0">Graphical Representation</h4>
+                <p class="text-muted">All the expenses which are spend in a period of times are compared using graphical bar graph or chart representaition which can understand easily.</p>
+              </div>
+      
+              <div class="d-flex flex-column gap-2">
+                <div
+                  class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
+                  <svg class="bi" width="1em" height="1em">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-ui-checks-grid" viewBox="0 0 16 16">
+                      <path d="M2 10h3a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1zm9-9h3a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zm0 9a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-3zm0-10a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h3a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2h-3zM2 9a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h3a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H2zm7 2a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-3a2 2 0 0 1-2-2v-3zM0 2a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm5.354.854a.5.5 0 1 0-.708-.708L3 3.793l-.646-.647a.5.5 0 1 0-.708.708l1 1a.5.5 0 0 0 .708 0l2-2z"/>
+                    </svg>
+                  </svg>
+                </div>
+                <h4 class="fw-semibold mb-0">Categorized Expenses</h4>
+                <p class="text-muted">All the expenses are catogerized according to the type of usage like  food , entertainment e.t.c.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      
+      
+          <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+      
+            
+        </body>
+      </html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>Dashboard</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+        <link href="static\css\styles.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <script>
+            window.watsonAssistantChatOptions = {
+              integrationID: "e15973c3-bf08-44d2-b1a3-fcaef746b52c", // The ID of this integration.
+              region: "au-syd", // The region your integration is hosted in.
+              serviceInstanceID: "561acd5a-e866-4ae1-8b04-999c9b3d1b84", // The ID of your service instance.
+              onLoad: function(instance) { instance.render(); }
+            };
+            setTimeout(function(){
+              const t=document.createElement('script');
+              t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+              document.head.appendChild(t);
+            });
+          </script>
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-2" href="dashboard">Personal Expense Tracker</a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+            </form>
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="profile">Profile</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="signin">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">Application</div>
+                            <a class="nav-link" href="dashboard">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Dashboard
+                            </a>
+                            <div class="sb-sidenav-menu-heading">Services</div>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Add Expenses
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="add_manually">Add Manually</a>
+                                    <a class="nav-link" href="add_csv">Add using CSV</a>
+                                </nav>
+                            </div>
+                            
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                Budget Management
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="set_limit">Setting Expense Limits</a>
+                                </nav>
+                            </div> 
+
+                            
+                            <div class="sb-sidenav-menu-heading">Addons</div>
+                            <a class="nav-link" href="monthlycharts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                Monthly Charts
+                            </a>
+                            <a class="nav-link" href="yearlycharts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                Yearly Charts
+                            </a>
+                            <a class="nav-link" href="table">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                Tables
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Logged in as:</div>
+                        {{email}}
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">Dashboard</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item active">Personal Expense Tracker Application</li>
+                        </ol>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="card bg-primary text-white mb-4">
+                                    <div class="card-body">Monthly Details</div>
+                                        <div class="card-footer d-flex align-items-center justify-content-between">
+                                            <a class="small text-white stretched-link" href="monthlycharts">View Details</a>
+                                            <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                        </div>
+                                </div>
+                            </div>
+                                <div class="col-6">
+                                    <div class="card bg-primary text-white mb-4">
+                                        <div class="card-body">Yearly Details</div>
+                                        <div class="card-footer d-flex align-items-center justify-content-between">
+                                            <a class="small text-white stretched-link" href="yearlycharts">View Details</a>
+                                            <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <div>
+                            <p class="link-danger">{{ msg }}</p>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="card bg-dark text-white mb-4">
+                                        <div class="card-body">Monthly Limit: {{ monthly_l }}<br>Monthly Expenses: {{monthly_a}}</div>
+                                            <div class="card-footer d-flex align-items-center justify-content-between">
+                                                
+                                            </div>
+                                    </div>
+                                </div>
+                                    <div class="col-6">
+                                        <div class="card bg-dark text-white mb-4">
+                                            <div class="card-body">Yearly Limit: {{yearly_l}}<br>Yearly Expenses: {{yearly_a}}</div>
+                                            <div class="card-footer d-flex align-items-center justify-content-between">
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <div>
+                        <div class="row justify-content-around">
+                            <div class="col-lg-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                            <i class="fas fa-chart-pie me-1"></i>
+                                            Pie Chart - Current Month Expenses.
+                                        </div>
+                                        <div class="card-body"><canvas id="myPieChart" width="60%" height="30%"></canvas></div>
+                                        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                                        <script>
+                                            const pie = document.getElementById('myPieChart');
+                                            let current_month = JSON.parse({{ current_month| tojson }})
+                                            let month_amount = JSON.parse({{ month_amount | tojson }})
+                                            var myPieChart = new Chart(pie, {
+                                                type: 'pie',
+                                                data: {
+                                                  labels: current_month,
+                                                  datasets: [{
+                                                    data: month_amount,
+                                                    backgroundColor: ['#007eef', '#dee545', '#ffcee7', '#28aee5','#ff7eef', '#dcff45', '#ffffc7', '#28a745','#ff7bff', '#dc35aa', '#ffcaa7', '#2aa745'],
+                                                  }],
+                                                },
+                                              });
+                                              
+                                        </script>
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="card mb-4">
+                                        <div class="card-header">
+                                            <i class="fas fa-chart-pie me-1"></i>
+                                            Pie Chart - Current Year Expenses.
+                                        </div>
+                                        <div class="card-body"><canvas id="myPieChartyear" width="100%" height="50"></canvas></div>
+                                        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                                        <script>
+                                            const pieyear = document.getElementById('myPieChartyear');
+                                            let current_year = JSON.parse({{ current_year | tojson }})
+                                            let year_amount = JSON.parse({{ year_amount | tojson }})
+                                            var myPieChart = new Chart(pieyear, {
+                                                type: 'pie',
+                                                data: {
+                                                  labels: current_year,
+                                                  datasets: [{
+                                                    data: year_amount,
+                                                    backgroundColor: ['#007eef', '#dee545', '#ffcee7', '#28aee5','#ff7eef', '#dcff45', '#ffffc7', '#28a745','#ff7bff', '#dc35aa', '#ffcaa7', '#2aa745'],
+                                                  }],
+                                                },
+                                              });
+                                              
+                                        </script>
+                                        
+                                    </div>
+                                </div>
+                        
+                                </div>
+                                
+                            
+
+                        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="static\js\scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+    </body>
+</html>
